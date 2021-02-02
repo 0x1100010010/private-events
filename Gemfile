@@ -42,6 +42,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'guard', '~> 2.16'
+  gem 'guard-livereload', '~> 2.5'
 end
 
 group :test do
@@ -54,3 +56,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Custom Gems
+gem 'simple_form', '~> 5.0'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.7'
+gem 'bootstrap', '~> 5.0.0.beta1'
+gem "jquery-rails", "~> 4.4"
