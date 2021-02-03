@@ -15,3 +15,11 @@
  */
 
  @import "bootstrap";
+
+$hoverColor: #eeeeee;
+
+.nav-link, .navbar-brand{
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
