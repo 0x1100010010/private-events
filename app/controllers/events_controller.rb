@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show edit update destroy ]
+  include EventsHelper
+  before_action :require_session, except: [:index]
 
   # GET /events or /events.json
   def index
@@ -21,17 +22,15 @@ class EventsController < ApplicationController
 
   # POST /events or /events.json
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
 
-    respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: "Event was successfully created." }
-        format.json { render :show, status: :created, location: @event }
+        flash[:success] = "Event '#{@event.name}' created!"
+        redirect_to @event
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        flash[:alert] = @event.errors
+        render 'new'
       end
-    end
   end
 
   # PATCH/PUT /events/1 or /events/1.json
@@ -56,14 +55,4 @@ class EventsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def event_params
-      params.require(:event).permit(:name, :description, :location, :start_time, :end_time, :date)
-    end
 end
