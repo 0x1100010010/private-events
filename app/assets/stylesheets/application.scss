@@ -14,7 +14,9 @@
  *= require_self
  */
 
+
  @import "bootstrap";
+  @import 'sessions';
 
 $hoverColor: #eeeeee;
 
@@ -22,4 +24,10 @@ $hoverColor: #eeeeee;
   &:hover {
     background-color: $hoverColor;
   }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
