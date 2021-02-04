@@ -1,21 +1,13 @@
 
-<nav class="navbar sticky-top navbar-expand-lg p-4 justify-content-between ">
-  <div><%= link_to 'LeEvents', root_path, class: 'navbar-brand p-2' %></div>
+<nav class="navbar sticky-top navbar-expand-lg p-3 justify-content-between bg-light">
+  <div><%= link_to 'LeEvents', root_path, class: 'navbar-brand p-3' %></div>
   <div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navbar-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <%= link_to 'Sign Out', sessions_signout_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign In', sessions_signin_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Sign Up', sessions_signup_path, class: 'nav-link' %>
-        </li>
+        <%= navbar_links %>
       </ul>
     </div>
   </div>
