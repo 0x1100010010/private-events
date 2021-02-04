@@ -44,6 +44,7 @@ group :development do
   gem 'spring'
   gem 'guard', '~> 2.16'
   gem 'guard-livereload', '~> 2.5'
+  # gem 'better_errors'
 end
 
 group :test do
