@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :sessions, only: [:new, :create, :destroy]
   get 'sessions/signup', to: 'users#new'
   get 'sessions/signin', to: 'sessions#new'
