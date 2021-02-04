@@ -13,7 +13,6 @@ module UsersHelper
     if user
       session[:user_id] = user.id
       redirect_to root_url, notice: "User #{user.name} account signed up successfully!"
-      # flash.now[:notice] = "User #{user.name} account created and Signed in successfully!"
     else
       flash.now[:alert] = "Username is invalid"
     end

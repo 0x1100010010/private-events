@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, notice: "Signed in successfully!"
     else
       flash.now[:alert] = "Username is invalid"
+      render 'new'
     end
   end
 
