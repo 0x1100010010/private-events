@@ -1,4 +1,11 @@
 module ApplicationHelper
+
+  def require_session
+    unless current_user
+      redirect_to login_path, :alert => 'Sign up or Log in to access this feature!'
+    end
+  end
+
   def navbar_links
     html_out = ''
     if session[:user_id]
