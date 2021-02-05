@@ -11,11 +11,11 @@
           <div class="col-sm-6 col-lg-4 m-15px-tb">
             <div class="media box-shadow-only-hover hover-top border-all-1 border-color-gray p-15px">
               <div class="p-20px-l media-body">
+                <div class="d-flex justify-content-between"><span class="m-5px-tb text-muted">Created by# @<%= event.creator.username %></span> <span><%= render_controls(event) %></span></div>
                 <span class="theme2nd-bg white-color p-0px-tb p-10px-lr font-small border-radius-15"><%= "#{event.location}, #{event.date}" %></span>
                 <h6 class="m-5px-tb"><%= event.name %></h6>
                 <p class="m-0px font-small"><%= event.description %></p>
                 <span class="theme2nd-bg white-color p-0px-tb p-10px-lr font-small border-radius-15"><%= "Timing# #{event.start_time.time.hour}:#{event.start_time.time.min} - #{event.end_time.time.hour}:#{event.end_time.time.min}" %></span>
-                <span><%= link_to 'Show', event %> <%= link_to 'Edit', edit_event_path(event) %> <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></span>
               </div>
             </div>
           </div>
