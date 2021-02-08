@@ -3,4 +3,6 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
 
   has_many :events
+  has_many :event_enrolments
+  has_many :attended_event, through: :event_enrolments, source: :event
 end
