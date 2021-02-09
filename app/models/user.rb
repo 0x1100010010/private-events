@@ -4,5 +4,5 @@ class User < ApplicationRecord
 
   has_many :events
   has_many :event_enrolments
-  has_many :attended_event, through: :event_enrolments, source: :event
+  has_many :attended_event, through: :event_enrolments
 end
