@@ -9,6 +9,10 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    @invited_events = User.find(params[:id]).attended_event
+    @upcoming_events = @invited_events.upcoming_events
+    @past_events = @invited_events.past_events
+    @created_events = User.find(params[:id]).events
   end
 
   # GET /users/new
@@ -64,6 +68,10 @@ class UsersController < ApplicationController
     else
       flash.now[:alert] = "Username is invalid"
     end
+  end
+
+  def invitation
+    @users = User.all
   end
 
 end
