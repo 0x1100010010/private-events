@@ -1,12 +1,20 @@
 
-<nav class="navbar sticky-top navbar-expand-lg p-3 justify-content-between bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top justify-content-between">
   <div><%= link_to 'LeEvents', root_path, class: 'navbar-brand p-3' %></div>
   <div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarExample01"
+      aria-controls="navbarExample01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
     </button>
-    <div class="collapse navbar-collapse navbar-end" id="navbarNav">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <%= navbar_links %>
       </ul>
     </div>

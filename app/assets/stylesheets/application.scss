@@ -15,7 +15,7 @@
  */
 
 
- @import "bootstrap";
+ //@import "bootstrap";
   @import 'sessions';
 
 $hoverColor: #eeeeee;
@@ -26,19 +26,7 @@ $hoverColor: #eeeeee;
   }
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-li {
-  &:hover {
-    color: orangered;
-  }
-}
-
-a {
+li, a {
   &:hover {
     color: orangered;
   }
