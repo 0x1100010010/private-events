@@ -125,29 +125,6 @@ body{margin-top:20px;}
   color: #15b2ec;
 }
 
-.pink-bg-alt {
-  background-color: rgba(241, 38, 153, 0.1);
-}
-
-.pink-bg {
-  background-color: #f12699;
-}
-
-.pink-after:after {
-  background-color: #f12699;
-}
-
-.pink-before:before {
-  background-color: #f12699;
-}
-
-.pink-color-alt {
-  color: rgba(241, 38, 153, 0.65);
-}
-
-.pink-color {
-  color: #f12699;
-}
 
 .body-bg-alt {
   background-color: rgba(113, 128, 150, 0.1);
@@ -188,9 +165,7 @@ body{margin-top:20px;}
 .dark-g-bg {
   background: linear-gradient(50deg, #273444 0, #272b44 100%);
 }
-.yellow-bg {
-  background-color: #ffbe3d;
-}
+
 .border-radius-50 {
   border-radius: 50%;
 }
@@ -209,4 +184,14 @@ body{margin-top:20px;}
 }
 .border-all-1 {
   border: 1px solid;
+}
+
+.media{
+  height: 100%;
+  &:hover {
+    .h5 {
+      font-weight: 900;
+    }
+    color: orangered;
+  }
 }
