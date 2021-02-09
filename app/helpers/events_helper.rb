@@ -20,19 +20,16 @@ module EventsHelper
         <%= link_to event, method: :delete, data: { confirm: 'Are you sure?' } do %>
           <i class=\"fas fa-trash\"></i>
         <% end %>"
-      render inline: @@html_out,locals: { event: event }
+      render inline: @@html_out, locals: { event: event }
     end
   end
 
-  def render_ongoing_events(event)
-    if @ongoing_events
-      @@html_out = ''
-      @@html_out << " <h4 class=\"m-3\">Ongoing Events</h4>
-          <div class=\"d-flex overflow-auto\">"
-
-      @@html_out << "</div>"
-
-        render inline: @@html_out,locals: { event: event }
+  def render_index_events(related_events)
+    if related_events
+      title = 'Ongoing Events' if related_events == @ongoing_events
+      title = 'Upcoming Events' if related_events == @upcoming_events
+      title = 'Past Events' if related_events == @past_events
+      render 'events/partials/event_index', related_events: related_events, title: title
     end
   end
 
