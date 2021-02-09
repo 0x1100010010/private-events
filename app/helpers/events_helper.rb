@@ -24,6 +24,18 @@ module EventsHelper
     end
   end
 
+  def render_ongoing_events(event)
+    if @ongoing_events
+      @@html_out = ''
+      @@html_out << " <h4 class=\"m-3\">Ongoing Events</h4>
+          <div class=\"d-flex overflow-auto\">"
+
+      @@html_out << "</div>"
+
+        render inline: @@html_out,locals: { event: event }
+    end
+  end
+
   def creator?
     set_event
     return if current_user.id == @event.user_id
