@@ -18,7 +18,7 @@
  //@import "bootstrap";
   @import 'sessions';
 
-$hoverColor: #eeeeee;
+$hoverColor: #ba50fd11;
 
 .nav-link, .navbar-brand{
   &:hover {
@@ -28,6 +28,13 @@ $hoverColor: #eeeeee;
 
 li, a {
   &:hover {
-    color: orangered;
+    background-color: transparent;
+    color: #ba50fd;
+    //text-shadow:0px 0px 30px;
+    //box-shadow:0px 0px 10px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
   }
 }
