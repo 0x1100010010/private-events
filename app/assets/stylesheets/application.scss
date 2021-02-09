@@ -31,3 +31,15 @@ $hoverColor: #eeeeee;
   bottom: 0;
   width: 100%;
 }
+
+li {
+  &:hover {
+    color: orangered;
+  }
+}
+
+a {
+  &:hover {
+    color: orangered;
+  }
+}
