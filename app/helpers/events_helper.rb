@@ -33,6 +33,12 @@ module EventsHelper
     end
   end
 
+  def render_invite_controls(event)
+    if event.creator == current_user
+      render 'events/partials/invite_controls', event: event
+    end
+  end
+
   def creator?
     set_event
     return if current_user.id == @event.user_id

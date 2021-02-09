@@ -6,30 +6,10 @@
           <div class="media box-shadow-only-hover hover-top border-all-1 border-color-gray p-15px">
             <div class="p-2 media-body">
               <div>
-                <div class="d-flex justify-content-between"><h5 class="m-0"><%= @event.name %></h5> <span><%= render_controls(@event) %></span></div>
-                <div class=""><span class="text-muted text-smaller mb-2">Host: <%= @event.creator.name %></span></div>
+                <div class="d-flex justify-content-between my-2"><h5 class="m-0"><%= @event.name %></h5> <span><%= render_controls(@event) %></span></div>
+                <div class=""><span class="text-muted text-smaller mb-3">Host: <%= @event.creator.name %></span></div>
                 <p class="m-0px font-small mb-2"><%= @event.description %></p>
-                <% if @event.creator == current_user %>
-
-                  <div class="btn-group p-0 mb-2 shadow-0 ">
-                    <button
-                      type="button"
-                      class="btn btn-light dropdown-toggle"
-                      data-mdb-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Invited: <span class="badge bg-danger ms-2"><%= User.find(@event.event_enrolments.map { |e| e.user_id }).count %></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <% User.find(@event.event_enrolments.map { |enr| enr.user_id }).each do |user| %>
-                          <div class="dropdown-item"><%= user.name %></div>
-                        <% end %>
-                      </li>
-                    </ul>
-                  </div>
-                  <%= button_to "Invite", invite_path, params: {:event_id => @event.id, :user_id => current_user.id}, method: :get, class: "btn btn-secondary w-100 mb-2" %>
-                <% end %>
+                <%= render_invite_controls(@event) %>
               </div>
               <div class="d-flex justify-content-between bottom-0">
                 <span class="theme2nd-bg white-color p-0px-tb p-10px-lr font-small border-radius-15"><i class="fas fa-map-marker-alt"></i><%= " #{@event.location}, #{@event.date}" %></span>

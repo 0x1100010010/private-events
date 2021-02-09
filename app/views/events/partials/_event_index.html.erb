@@ -1,14 +1,14 @@
-<div class="card text-dark bg-white rounded shadow-md p-0 border-0 m-5">
+<div class="card text-dark bg-white rounded shadow-md p-0 border-0 m-4">
   <h4 class="m-3"><%= title %></h4>
   <div class="d-flex overflow-auto">
     <% related_events&.each do |event| %>
       <div class="col-3 m-3 mb-5">
         <div class="media box-shadow-only-hover hover-top border-all-1 border-color-gray p-15px">
           <div class="p-2 media-body d-flex flex-column justify-content-between h-100">
-            <div>
+            <div class="mb-2">
               <div class="d-flex justify-content-between"><h5 class="m-0"><%= event.name %></h5> <span><%= render_controls(event) %></span></div>
-              <div class=""><span class="text-muted text-smaller">Host: <%= event.creator.name %></span></div>
-              <p class="m-0px font-small description"><%= event.description %></p>
+              <div class=""><span class="text-muted text-smaller mt-2">Host: <%= event.creator.name %></span></div>
+              <p class="font-small"><%= event.description %></p>
             </div>
             <div class="d-flex justify-content-between bottom-0">
               <span class="theme2nd-bg white-color p-0px-tb p-10px-lr font-small border-radius-15"><i class="fas fa-map-marker-alt"></i><%= " #{event.location}, #{event.date}" %></span>

@@ -1,0 +1,18 @@
+<div class="btn-group p-0 mb-2 shadow-0 w-100 my-3">
+  <button
+    type="button"
+    class="btn btn-light dropdown-toggle"
+    data-mdb-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Invited: <span class="badge bg-danger ms-2"><%= User.find(event.event_enrolments.map { |e| e.user_id }).count %></span>
+  </button>
+  <ul class="dropdown-menu w-100">
+    <li>
+      <% User.find(event.event_enrolments.map { |enr| enr.user_id }).each do |user| %>
+        <div class="dropdown-item"><%= user.name %></div>
+      <% end %>
+    </li>
+  </ul>
+</div>
+<%= button_to "Invite", invite_path, params: {:event_id => event.id, :user_id => current_user.id}, method: :get, class: "btn btn-secondary w-100 my-3" %>

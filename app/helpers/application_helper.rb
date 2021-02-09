@@ -26,4 +26,16 @@ module ApplicationHelper
     end
     render inline: html_out
   end
+
+  def render_notifications
+    html_out = ''
+    if flash[:notice]
+      html_out << "<div class=\"alert-success alert-dismissible fade show text-center sticky-top\" role=\"alert\">
+      <strong><%= notice %></strong></div>"
+    else flash[:alert]
+      html_out << "<div class=\"alert-warning alert-dismissible fade show text-center sticky-top\" role=\"alert\">
+      <strong><%= alert %></strong></div>"
+    end
+    render inline: html_out
+  end
 end
