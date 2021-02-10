@@ -7,10 +7,10 @@ Rails.application.routes.draw do
     get 'signout', to: 'sessions#destroy'
   end
 
-  resources :users
+  resources :users, only: [ :new, :create, :show ]
   get 'invite', to: 'users#invitation'
   resources :events
-  resources :event_enrolment, only: [:create, :destroy, :update]
+  resources :event_enrolment, only: [ :create, :destroy, :update ]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'events#index'
