@@ -14,19 +14,20 @@
  *= require_self
  */
 
-
- //@import "bootstrap";
-  @import 'sessions';
+//@import "bootstrap";
+@import 'sessions';
 
 $hoverColor: #ba50fd11;
 
-.nav-link, .navbar-brand{
+.nav-link,
+.navbar-brand {
   &:hover {
     background-color: $hoverColor;
   }
 }
 
-li, a {
+li,
+a {
   &:hover {
     background-color: transparent;
     color: #ba50fd;

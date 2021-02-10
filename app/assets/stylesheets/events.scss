@@ -2,24 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body{margin-top:20px;}
+body { margin-top: 20px; }
+
 .p-15px {
   padding: 15px;
 }
+
 .border-color-gray {
   border-color: #f2f3fa;
 }
+
 .border-all-1 {
   border: 1px solid;
 }
+
 .hover-top {
   position: relative;
   top: 0;
 }
+
 .m-15px-tb {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
 .overlay-link {
   position: absolute;
   top: 0;
@@ -28,52 +34,62 @@ body{margin-top:20px;}
   right: 0;
   border: 0;
 }
+
 .border-radius-50 {
   border-radius: 50%;
 }
+
 .icon-50 {
   width: 50px;
   height: 50px;
   text-align: center;
   font-size: 21px;
 }
+
 .white-color {
-  color: #ffffff;
+  color: #fff;
 }
+
 .theme-bg {
   background-color: #0050d8;
 }
+
 .icon-50 i.number {
   font-style: normal;
 }
+
 .icon-50 i {
   line-height: 50px;
 }
+
 .p-20px-l {
   padding-left: 20px;
 }
+
 .p-10px-lr {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .p-0px-tb {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
+
 .border-radius-15 {
   border-radius: 15px;
 }
-.white-color {
-  color: #ffffff;
-}
+
 .theme2nd-bg {
   background-color: #53d267;
 }
+
 .m-0px {
-  margin: 0px;
+  margin: 0;
 }
+
 .font-small {
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 1rem;
 }
 
@@ -85,11 +101,11 @@ body{margin-top:20px;}
   background-color: #11e279;
 }
 
-.green-after:after {
+.green-after::after {
   background-color: #11e279;
 }
 
-.green-before:before {
+.green-before::before {
   background-color: #11e279;
 }
 
@@ -109,11 +125,11 @@ body{margin-top:20px;}
   background-color: #15b2ec;
 }
 
-.blue-after:after {
+.blue-after::after {
   background-color: #15b2ec;
 }
 
-.blue-before:before {
+.blue-before::before {
   background-color: #15b2ec;
 }
 
@@ -125,7 +141,6 @@ body{margin-top:20px;}
   color: #15b2ec;
 }
 
-
 .body-bg-alt {
   background-color: rgba(113, 128, 150, 0.1);
 }
@@ -134,11 +149,11 @@ body{margin-top:20px;}
   background-color: #718096;
 }
 
-.body-after:after {
+.body-after::after {
   background-color: #718096;
 }
 
-.body-before:before {
+.body-before::before {
   background-color: #718096;
 }
 
@@ -166,32 +181,18 @@ body{margin-top:20px;}
   background: linear-gradient(50deg, #273444 0, #272b44 100%);
 }
 
-.border-radius-50 {
-  border-radius: 50%;
-}
-.icon-50 {
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  font-size: 21px;
-}
-
 .box-shadow-only-hover:hover {
   box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.1);
 }
-.border-color-gray {
-  border-color: #f2f3fa !important;
-}
-.border-all-1 {
-  border: 1px solid;
-}
 
-.media{
+.media {
   height: 100%;
+
   &:hover {
     .h5 {
       font-weight: 900;
     }
+
     color: #ba50fd;
   }
 }
