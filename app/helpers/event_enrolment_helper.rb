@@ -8,5 +8,4 @@ module EventEnrolmentHelper
   def set_event_enrolment
     @event_enrolment = EventEnrolment.find(params[:id])
   end
-
 end

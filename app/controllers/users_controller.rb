@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   include UsersHelper
-  before_action :require_session, except: [:new, :create]
+  before_action :require_session, except: %i[new create]
 
   # GET /users or /users.json
   def index
@@ -21,13 +21,12 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-    
+
     if @user.save
       start_session(@user)
     else
@@ -42,7 +41,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: "User was successfully updated." }
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -55,7 +54,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,14 +63,13 @@ class UsersController < ApplicationController
     @user = User.find_by_username(params[:username])
     if @user
       session[:user_id] = @user.id
-      redirect_to root_url, notice: "Signed in successfully!"
+      redirect_to root_url, notice: 'Signed in successfully!'
     else
-      flash.now[:alert] = "Username is invalid"
+      flash.now[:alert] = 'Username is invalid'
     end
   end
 
   def invitation
     @users = User.all
   end
-
 end
