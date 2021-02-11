@@ -1,0 +1,58 @@
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+
+    <h5 class="text-center m-5">User Stats</h5>
+    <div class="col-3 m-3 mt-0">
+      <div class="card  ">
+        <div class="card-header">Hosted Events: <%= current_user.events.count %></div>
+        <div class="card-body">
+          <ul class="card-text">
+            <% if current_user.events.empty? %>
+              <p>User is not hosting</p>
+            <% else %>
+              <% current_user.events.each do |event| %>
+                <li class="has-text-centered"><%=link_to event.name, event_path(event) %></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3 m-3 mt-0">
+      <div class="card  ">
+        <div class="card-header">Upcoming Events: <%= current_user.attended_event.where('date >= ?', Date.today).count %></div>
+        <div class="card-body">
+          <ul class="card-text">
+            <% if current_user.attended_event.where('date >= ?', Date.today).count.zero? %>
+              <p>No planned parties</p>
+            <% else %>
+              <% current_user.attended_event.where('date >= ?', Date.today).each do |event| %>
+                <li class="has-text-centered"><%=link_to event.name, event_path(event) %></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3 m-3 mt-0">
+      <div class="card  ">
+        <div class="card-header">Attended Events: <%= current_user.attended_event.where('date < ?', Date.today).count %></div>
+        <div class="card-body">
+          <ul class="card-text">
+            <% if current_user.attended_event.empty? %>
+              <p>User is not partying</p>
+            <% else %>
+              <% current_user.attended_event.where('date < ?', Date.today).each do |event| %>
+                <li class="has-text-centered"><%=link_to event.name, event_path(event) %></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

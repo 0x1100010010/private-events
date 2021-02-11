@@ -1,0 +1,198 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body { margin-top: 20px; }
+
+.p-15px {
+  padding: 15px;
+}
+
+.border-color-gray {
+  border-color: #f2f3fa;
+}
+
+.border-all-1 {
+  border: 1px solid;
+}
+
+.hover-top {
+  position: relative;
+  top: 0;
+}
+
+.m-15px-tb {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+}
+
+.border-radius-50 {
+  border-radius: 50%;
+}
+
+.icon-50 {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.theme-bg {
+  background-color: #0050d8;
+}
+
+.icon-50 i.number {
+  font-style: normal;
+}
+
+.icon-50 i {
+  line-height: 50px;
+}
+
+.p-20px-l {
+  padding-left: 20px;
+}
+
+.p-10px-lr {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.p-0px-tb {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.border-radius-15 {
+  border-radius: 15px;
+}
+
+.theme2nd-bg {
+  background-color: #53d267;
+}
+
+.m-0px {
+  margin: 0;
+}
+
+.font-small {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.green-bg-alt {
+  background-color: rgba(17, 226, 121, 0.1);
+}
+
+.green-bg {
+  background-color: #11e279;
+}
+
+.green-after::after {
+  background-color: #11e279;
+}
+
+.green-before::before {
+  background-color: #11e279;
+}
+
+.green-color-alt {
+  color: rgba(17, 226, 121, 0.65);
+}
+
+.green-color {
+  color: #11e279;
+}
+
+.blue-bg-alt {
+  background-color: rgba(21, 178, 236, 0.1);
+}
+
+.blue-bg {
+  background-color: #15b2ec;
+}
+
+.blue-after::after {
+  background-color: #15b2ec;
+}
+
+.blue-before::before {
+  background-color: #15b2ec;
+}
+
+.blue-color-alt {
+  color: rgba(21, 178, 236, 0.65);
+}
+
+.blue-color {
+  color: #15b2ec;
+}
+
+.body-bg-alt {
+  background-color: rgba(113, 128, 150, 0.1);
+}
+
+.body-bg {
+  background-color: #718096;
+}
+
+.body-after::after {
+  background-color: #718096;
+}
+
+.body-before::before {
+  background-color: #718096;
+}
+
+.body-color-alt {
+  color: rgba(113, 128, 150, 0.65);
+}
+
+.body-color {
+  color: #718096;
+}
+
+.white-color-light {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.theme-g-bg {
+  background: linear-gradient(to right, #0050d8, #002a72);
+}
+
+.dark-g-bg {
+  background: linear-gradient(50deg, #273444 0, #272b44 100%);
+}
+
+.box-shadow-only-hover:hover {
+  box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.1);
+}
+
+.media {
+  height: 100%;
+
+  &:hover {
+    .h5 {
+      font-weight: 900;
+    }
+
+    color: #ba50fd;
+  }
+}
