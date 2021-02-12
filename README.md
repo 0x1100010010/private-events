@@ -19,7 +19,7 @@ Basic concepts of Ruby on Rails have been used, including:
 
 ## To install and run
 
-- Clone the project repo from [GitHub](https://github.com/bashforger/private-events) using `git clone https://github.com/Misori-simon/private-events`
+- Clone the project repo from [GitHub](https://github.com/bashforger/private-events) using `git clone https://github.com/bashforger/private-events`
 - Make sure [Ruby-lang](https://www.ruby-lang.org/en/) is installed
 - Make sure [Bundler](https://bundler.io/) is installed
 - Navigate to the project directory like `cd private-events`
