@@ -12,7 +12,7 @@
   user.events.create!([
     { name: 'event_by_'+user.name+'_'+i.to_s, description: 'event_discription_'+i.to_s, location: 'location_'+i.to_s, start_time: Time.current, end_time: i.hour.from_now, date: Date.current },
     { name: 'event_by_'+user.name+'_'+(i+1).to_s, description: 'event_discription_'+(i+1).to_s, location: 'location_'+(i+1).to_s, start_time: (i+2).hour.from_now, end_time: (i+3).hour.from_now, date: (i+1).day.from_now.to_date },
-    # { name: 'event_by_'+user.name+'_'+(i+2).to_s, description: 'event_discription_'+(i+2).to_s, location: 'location_'+(i+2).to_s, start_time: (i+24).hour.from_now, end_time: (i+30).hour.from_now, date: (i+2).day.from_now.to_date }
+    # { name: 'heroku createevent_by_'+user.name+'_'+(i+2).to_s, description: 'event_discription_'+(i+2).to_s, location: 'location_'+(i+2).to_s, start_time: (i+24).hour.from_now, end_time: (i+30).hour.from_now, date: (i+2).day.from_now.to_date }
   ])
 end
 
