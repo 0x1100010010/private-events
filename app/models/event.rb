@@ -4,6 +4,6 @@ class Event < ApplicationRecord
   has_many :attendees, through: :event_enrolments, source: :user
 
   scope :upcoming_events, -> { where('date > ?', Date.current) }
-  scope :ongoing_events, -> { where('date == ?', Date.current) }
+  scope :ongoing_events, -> { where('date = ?', Date.current) }
   scope :past_events, -> { where('date < ?', Date.current) }
 end
